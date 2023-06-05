@@ -1,0 +1,3 @@
+To do: 
+-initiate React Native project
+-add typescript
