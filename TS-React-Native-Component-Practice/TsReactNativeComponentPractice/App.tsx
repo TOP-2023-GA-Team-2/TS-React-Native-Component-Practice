@@ -40,4 +40,3 @@ const styles = StyleSheet.create({
   },
 });
 export default App;
-import { FlatList } from 'react-native';

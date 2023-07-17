@@ -75,11 +75,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   addItemButton: {
-    backgroundColor: '#eb8634',
+    backgroundColor: '#26AF56',
     paddingVertical: 20,
     borderRadius: 5,
     alignItems: 'center',
   },
-  buttonText: {color: '#fff', fontWeight: '500'},
+  buttonText: {color: '#054D2A', fontWeight: '800'},
 });
 export default AddItem;
