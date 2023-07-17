@@ -1,7 +1,8 @@
 import React, { FC, useState } from 'react';
-import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
+import { SafeAreaView, View, Text, StyleSheet, FlatList } from 'react-native';
 import Header from './src/components/Header';
 import AddItem, {IItem} from './src/components/AddItem';
+import Item from './src/components/Item';
 
 interface AppProps {
   // Define props for your component here
@@ -18,6 +19,13 @@ const App: FC<AppProps> = ({ /* Destructure props here */ }) => {
           setShoppingList={setShoppingList}
           shoppingList={shoppingList}
         />
+        <FlatList
+          data={shoppingList}
+          keyExtractor={(item, index) => `${item.item}-${index}`}
+          renderItem={({item}) => (
+            <Item item={item.item} quantity={item.quantity} />
+          )}
+        />
       </View>
     </SafeAreaView>
   );
@@ -32,3 +40,4 @@ const styles = StyleSheet.create({
   },
 });
 export default App;
+import { FlatList } from 'react-native';
